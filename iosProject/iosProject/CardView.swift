@@ -2,39 +2,38 @@ import SwiftUI
 
 struct CardView: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 16) {
+        VStack(alignment: .center, spacing: SizeManager.indent16) {
             HStack(alignment: .center) {
                   // Space Between
-                  HStack(alignment: .center, spacing: 12) {
+                HStack(alignment: .center, spacing: SizeManager.indent12) {
                           
                     ZStack {
 
                               Rectangle()
                                 .foregroundColor(.clear)
-                                .frame(width: 48, height: 48)
+                                .frame(width: SizeManager.doctorIconSize, height: SizeManager.doctorIconSize)
                                 .background(
                                       Image("image1")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 48, height: 48)
+                                        .frame(width: SizeManager.doctorIconSize, height: SizeManager.doctorIconSize)
                                         .clipped()
                                         .background(.white)
                                         .clipShape(Circle())
                                 )
 
-                      }.frame(width: 48, height: 48)
+                    }.frame(width: SizeManager.doctorIconSize, height: SizeManager.doctorIconSize)
             
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: SizeManager.indent8) {
                     Text("Dr. Imran Syahir")
                       .font(
-                            Font.custom("Poppins", size: 16)
-                              .weight(.bold)
+                        Fonts.cardName
                       )
                       .foregroundColor(.white)
 
                     Text("General Doctor")
-                      .font(Font.custom("Poppins", size: 14))
-                      .foregroundColor(Color(red: 0.8, green: 0.88, blue: 1))
+                            .font(Fonts.cardPost)
+                            .foregroundColor(CustomColors.lightGrey)
                     }
                     .padding(0)
                 }
@@ -45,10 +44,10 @@ struct CardView: View {
                   // Alternative Views and Spacers
                 HStack(alignment: .center, spacing: 0) {
                     Image("arrow-right")
-                    .frame(width: 24, height: 24)
+                        .frame(width: SizeManager.cardIconSize, height: SizeManager.cardIconSize)
                 }
                 .padding(0)
-                .frame(width: 24, height: 24, alignment: .center)
+                .frame(width: SizeManager.cardIconSize, height: SizeManager.cardIconSize, alignment: .center)
             }
             .padding(0)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -59,15 +58,15 @@ struct CardView: View {
                 Rectangle()
                     .stroke(.white.opacity(0.15), lineWidth: 1)
             )
-            .background(Color(red: 0.8, green: 0.88, blue: 1))
+            .background(CustomColors.lightGrey)
 
-            HStack(alignment: .top, spacing: 12) {
+            HStack(alignment: .top, spacing: SizeManager.indent12) {
                 HStack(alignment: .center, spacing: 8) {
                     Image("calendar")
-                    .frame(width: 16, height: 16)
+                        .frame(width: SizeManager.smallIconSize, height: SizeManager.smallIconSize)
 
                     Text("Sunday, 12 June")
-                      .font(Font.custom("Poppins", size: 12))
+                        .font(Fonts.details)
                       .foregroundColor(.white)
                 }
                 .padding(0)
@@ -75,11 +74,11 @@ struct CardView: View {
 
                 HStack(alignment: .center, spacing: 8) {
                     Image("clock")
-                    .frame(width: 16, height: 16)
+                        .frame(width: SizeManager.smallIconSize, height: SizeManager.smallIconSize)
                     .foregroundColor(.white)
 
                     Text("11:00 - 12:00 AM")
-                      .font(Font.custom("Poppins", size: 12))
+                        .font(Fonts.details)
                       .foregroundColor(.white)
                 }
                 .padding(0)
@@ -89,8 +88,8 @@ struct CardView: View {
             .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .padding(20)
-        .frame(width: 327, alignment: .top)
-        .background(Color(red: 0.28, green: 0.58, blue: 1))
+        .frame(alignment: .top)
+        .background(CustomColors.blue)
         .cornerRadius(12)
     }
 }

@@ -2,28 +2,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .center) {
-            HeadView()
-            
-            VStack(spacing: 32) {
-                            VStack(spacing: 24) {
-                                VStack(spacing: 20) {
-                                    CardView()
+        ZStack() {
+            VStack(alignment: .center) {
+                HeadView()
+                
+                VStack(spacing: SizeManager.bigIndent) {
+                    VStack(spacing: SizeManager.stdIndent) {
+                        VStack(spacing: SizeManager.smallIndent) {
+                                        CardView()
 
-                                    SearchView()
+                                        SearchView()
+                                    }
+                                    .padding(0)
+
+                                    InformationView()
                                 }
                                 .padding(0)
 
-                                InformationView()
+                                DoctorView()
                             }
                             .padding(0)
-
-                            DoctorView()
-                        }
-                        .padding(0)
+            }
+            .padding(.horizontal, SizeManager.stdIndent)
+            
+            VStack(){
+                Spacer()
+                BarView()
+            }
+        }.frame(maxHeight: .infinity)
+        
         }
-        .background(.white)
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

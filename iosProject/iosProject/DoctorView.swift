@@ -25,52 +25,50 @@ struct DoctorView: View {
                     beginWork: "Open at 17.00")]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: SizeManager.indent16) {
             HStack() {
                 Text("Near Doctor")
                   .font(
-                        Font.custom("Poppins", size: 16)
-                          .weight(.semibold)
+                    Fonts.nearDoctor
                   )
-                .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
+                  .foregroundColor(CustomColors.black)
 
             }
             .padding(0)
             
             ForEach(doctors) { doctor in
-                VStack(alignment: .leading, spacing: 12) {
-                VStack(alignment: .center, spacing: 20) {
+                VStack(alignment: .leading, spacing: SizeManager.indent12) {
+                    VStack(alignment: .center, spacing: SizeManager.smallIndent) {
                     HStack(alignment: .center) {
                           // Space Between
-                          HStack(alignment: .top, spacing: 10) {
+                        HStack(alignment: .top, spacing: SizeManager.indent10) {
                               ZStack {
 
                                         Rectangle()
                                           .foregroundColor(.clear)
-                                          .frame(width: 48, height: 48)
+                                          .frame(width: SizeManager.doctorIconSize, height: SizeManager.doctorIconSize)
                                           .background(
                                             Image(doctor.image)
                                                   .resizable()
                                                   .aspectRatio(contentMode: .fill)
-                                                  .frame(width: 48, height: 48)
+                                                  .frame(width: SizeManager.doctorIconSize ,height: SizeManager.doctorIconSize)
                                                   .clipped()
                                                   .background(.white)
                                                   .clipShape(Circle())
                                           )
 
-                                }.frame(width: 48, height: 48)
+                              }.frame(width: SizeManager.doctorIconSize, height: SizeManager.doctorIconSize)
 
-                            VStack(alignment: .leading, spacing: 10) {
+                                                 VStack(alignment: .leading, spacing: SizeManager.indent10) {
                                 Text(doctor.name)
                                   .font(
-                                        Font.custom("Poppins", size: 16)
-                                          .weight(.bold)
+                                    Fonts.cardName
                                   )
-                                  .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
+                                  .foregroundColor(CustomColors.black)
 
                                 Text(doctor.speciality)
-                                  .font(Font.custom("Poppins", size: 14))
-                                  .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                                                         .font(Fonts.cardPost)
+                                                         .foregroundColor(CustomColors.grey)
                             }
                             .padding(0)
                         }
@@ -78,18 +76,18 @@ struct DoctorView: View {
 
                           Spacer()
                           // Alternative Views and Spacers
-                          HStack(alignment: .center, spacing: 8) {
+                        HStack(alignment: .center, spacing: SizeManager.indent8) {
                             Image("location")
-                            .frame(width: 16, height: 16)
+                                .frame(width: SizeManager.indent16, height: SizeManager.indent16)
 
                             Text(doctor.location)
-                              .font(Font.custom("Poppins", size: 14))
-                              .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                                .font(Fonts.cardPost)
+                                .foregroundColor(CustomColors.grey)
                         }
                         .padding(0)
                     }
                     .padding(0)
-                    .frame(width: 295, alignment: .center)
+                    .frame(alignment: .center)
 
                     Divider()
                     .frame(minHeight: 0, maxHeight: 0)
@@ -97,30 +95,30 @@ struct DoctorView: View {
                         Rectangle()
                             .stroke(.white.opacity(0.15), lineWidth: 1)
                     )
-                    .background(Color(red: 0.8, green: 0.88, blue: 1))
+                    .background(CustomColors.blue)
 
 
-                    HStack(alignment: .top, spacing: 12) {
-                        HStack(alignment: .center, spacing: 6) {
+                        HStack(alignment: .top, spacing: SizeManager.indent12) {
+                            HStack(alignment: .center, spacing: SizeManager.indent6) {
                             Image("clock")
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
+                                    .frame(width: SizeManager.smallIconTimeSize, height: SizeManager.smallIconTimeSize)
+                                    .foregroundColor(CustomColors.yellow)
                             
                             Text(doctor.grade)
-                              .font(Font.custom("Poppins", size: 12))
-                              .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
+                                    .font(Fonts.details)
+                                    .foregroundColor(CustomColors.yellow)
                         }
                         .padding(0)
                         //.frame(maxWidth: .infinity, alignment: .leading)
 
-                        HStack(alignment: .center, spacing: 6) {
+                            HStack(alignment: .center, spacing: SizeManager.indent6) {
                             Image("clock")
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
+                            .frame(width: SizeManager.smallIconTimeSize, height: SizeManager.smallIconTimeSize)
+                            .foregroundColor(CustomColors.blue)
                             
                             Text(doctor.beginWork)
-                              .font(Font.custom("Poppins", size: 12))
-                              .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
+                                    .font(Fonts.details)
+                                    .foregroundColor(CustomColors.blue)
                         }
                         .padding(0)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -128,17 +126,17 @@ struct DoctorView: View {
                     .padding(0)
                     .frame(alignment: .topLeading)
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 20)
+                .padding(.horizontal, SizeManager.indent16)
+                .padding(.vertical, SizeManager.smallIndent)
                 .background(.white)
                 .cornerRadius(12)
-                .shadow(color: Color(red: 0.35, green: 0.46, blue: 0.65)
+                .shadow(color: CustomColors.shadow
                 .opacity(0.04), radius: 10, x: 2, y: 12)
                 }
                 .padding(0)
             }
         }
         .padding(0)
-        .frame(width: 327)
+        //.frame()
     }
 }

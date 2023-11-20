@@ -16,23 +16,23 @@ struct InformationView: View {
     ]
 
     var body: some View {
-        HStack(alignment: .top, spacing: 13) {
+        HStack(alignment: .top, spacing: SizeManager.indent13) {
             ForEach(imageList) { item in
-                VStack(alignment: .center, spacing: 8) {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image(item.image)
-                        .frame(width: 24, height: 24)
+                VStack(alignment: .center, spacing: SizeManager.indent8) {
+                    HStack(alignment: .top, spacing: SizeManager.indent10) {
+                            Image(item.image)
+                            .frame(width: SizeManager.cardIconSize, height: SizeManager.cardIconSize)
 
-                    }.padding(24)
-                        .background(Color(red:0.98, green: 0.98, blue: 0.98))
-                        .cornerRadius(100)
+                    }.padding(SizeManager.stdIndent)
+                        .background(CustomColors.white)
+                            .cornerRadius(100)
 
 
-                    Text(item.name)
-                      .font(Font.custom("Poppins", size: 15))
-                      .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
-                }
-                .padding(0)
+                        Text(item.name)
+                        .font(Fonts.categories)
+                        .foregroundColor(CustomColors.grey)
+                    }
+                    .padding(0)
             }
             }
             .padding()

@@ -5,18 +5,18 @@ struct SearchView: View {
     @State private var search = ""
 
     var body: some View {
-        HStack(alignment: .center, spacing: 12) {
+        HStack(alignment: .center, spacing: SizeManager.indent12) {
             Image("search-normal")
-            .frame(width: 24, height: 24)
+                .frame(width: SizeManager.cardIconSize, height: SizeManager.cardIconSize)
 
             TextField("Search doctor or health issue",
             text: $search)
-              .font(Font.custom("Poppins", size: 15))
-              .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+            .font(Fonts.categories)
+            .foregroundColor(CustomColors.grey)
         }
-        .padding(16)
-        .frame(width: 327, alignment: .leading)
-        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+        .padding(SizeManager.indent16)
+        .frame(alignment: .leading)
+        .background(CustomColors.white)
         .cornerRadius(12)
     }
 }
