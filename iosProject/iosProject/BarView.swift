@@ -57,8 +57,8 @@ struct TabBar: View {
             //.background(Color.gray.opacity(0.2))
             .padding(.horizontal, SizeManager.stdIndent)
             .padding(.vertical, SizeManager.indent16)
-            .background(.white)
         }
+        .background(.white)
         }
 }
 

@@ -16,4 +16,5 @@ struct SizeManager {
     static let indent12 = CGFloat(12)
     static let indent13 = CGFloat(13)
     static let indent16 = CGFloat(16)
+    static let indent100 = CGFloat(100)
 }
