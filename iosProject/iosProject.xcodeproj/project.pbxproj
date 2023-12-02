@@ -16,7 +16,6 @@
 		F7EB1C252B0AFEA200444732 /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB1C242B0AFEA200444732 /* DoctorView.swift */; };
 		F7EB1C272B0AFED900444732 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB1C262B0AFED900444732 /* InformationView.swift */; };
 		F7EB1C292B0AFF0600444732 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB1C282B0AFF0600444732 /* SearchView.swift */; };
-		F7EB1C2B2B0AFF5D00444732 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F7EB1C2A2B0AFF5D00444732 /* README.md */; };
 		F7EB1C2F2B0B029100444732 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB1C2E2B0B029100444732 /* BarView.swift */; };
 		F7EB1C332B0B0F2300444732 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB1C322B0B0F2300444732 /* Sizes.swift */; };
 		F7EB1C352B0B180500444732 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB1C342B0B180500444732 /* Fonts.swift */; };
@@ -34,7 +33,6 @@
 		F7EB1C242B0AFEA200444732 /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
 		F7EB1C262B0AFED900444732 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		F7EB1C282B0AFF0600444732 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		F7EB1C2A2B0AFF5D00444732 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../digital_department_ios-main/README.md"; sourceTree = "<group>"; };
 		F7EB1C2E2B0B029100444732 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		F7EB1C322B0B0F2300444732 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		F7EB1C342B0B180500444732 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 		F7EB1C062B0AFDC600444732 = {
 			isa = PBXGroup;
 			children = (
-				F7EB1C2A2B0AFF5D00444732 /* README.md */,
 				F7EB1C112B0AFDC600444732 /* IosProject */,
 				F7EB1C102B0AFDC600444732 /* Products */,
 			);
@@ -140,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F7EB1C0A2B0AFDC600444732 /* Build configuration list for PBXProject "IosProject" */;
+			buildConfigurationList = F7EB1C0A2B0AFDC600444732 /* Build configuration list for PBXProject "iosProject" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7EB1C2B2B0AFF5D00444732 /* README.md in Resources */,
 				F7EB1C1A2B0AFDC700444732 /* Preview Assets.xcassets in Resources */,
 				F7EB1C172B0AFDC700444732 /* Assets.xcassets in Resources */,
 			);
@@ -366,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7EB1C0A2B0AFDC600444732 /* Build configuration list for PBXProject "IosProject" */ = {
+		F7EB1C0A2B0AFDC600444732 /* Build configuration list for PBXProject "iosProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7EB1C1B2B0AFDC700444732 /* Debug */,
